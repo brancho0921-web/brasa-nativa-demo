@@ -1,0 +1,10 @@
+# Local QA artifacts
+hero-*.png
+preview-*.png
+verify-results.json
+verify.mjs
+scripts/
+
+# Operating-system files
+.DS_Store
+Thumbs.db

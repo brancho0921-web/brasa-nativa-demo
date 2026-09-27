@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#17130f">
+  <meta name="description" content="Brasa Nativa: demo gastronómica creada por AB Web Studio.">
+  <title>Brasa Nativa — Fuego, origen y sabor</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <header class="site-header" data-header>
+    <a class="brand" href="#inicio" aria-label="Brasa Nativa, volver al inicio">
+      <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span><strong>Brasa Nativa</strong><small>Fuego · origen · sabor</small></span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav" data-nav-toggle>
+      <span class="sr-only">Abrir menú</span><i></i><i></i>
+    </button>
+    <nav class="main-nav" id="main-nav" aria-label="Navegación principal" data-nav>
+      <a href="#destacados">Destacados</a>
+      <a href="#menu">Menú</a>
+      <a href="#historia">Nuestra esencia</a>
+      <a href="#visitanos">Visítanos</a>
+      <button class="button button-small button-ghost" type="button" data-reservation>Reservar</button>
+    </nav>
+  </header>
+
+  <main id="contenido">
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="assets/hero-poster.jpg" aria-hidden="true">
+        <source src="assets/hero-mobile-loop.webm" type="video/webm" media="(max-width: 620px) and (orientation: portrait)">
+        <source src="assets/hero-fire-loop.webm" type="video/webm">
+      </video>
+      <div class="hero-shade"></div>
+      <div class="hero-content shell">
+        <p class="eyebrow"><span></span>Cocina latinoamericana a la brasa</p>
+        <h1 id="hero-title">Brasa<br><em>Nativa</em></h1>
+        <p class="hero-lead">Fuego, origen y sabor. Una mesa contemporánea donde cada ingrediente cuenta de dónde viene.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#menu">Ver menú <span aria-hidden="true">↘</span></a>
+          <button class="button button-line" type="button" data-reservation>Reservar mesa</button>
+        </div>
+      </div>
+      <span class="demo-pill">Proyecto demostrativo</span>
+      <a class="scroll-cue" href="#destacados" aria-label="Explorar la página"><span>Descubre</span><i></i></a>
+    </section>
+
+    <section class="intro shell section" id="destacados">
+      <div class="section-heading reveal">
+        <p class="eyebrow eyebrow-dark"><span></span>Lo que nos mueve</p>
+        <h2>Sabores que<br><em>nacen del fuego</em></h2>
+      </div>
+      <p class="intro-copy reveal">Cocinamos sin prisa, cerca de la llama. Producto latino, técnicas honestas y platos pensados para compartir.</p>
+
+      <div class="feature-grid">
+        <article class="feature-card feature-card-large reveal" data-dish="costilla">
+          <div class="feature-visual"><img src="assets/shared-table.webp" alt="Mesa para compartir con corte de res a la brasa, maíz y acompañantes" width="960" height="960"></div>
+          <div class="feature-meta"><span>01 · Brasa</span><h3>Costilla de cocción lenta</h3><button type="button" aria-label="Ver Costilla de cocción lenta">Explorar <span>↗</span></button></div>
+        </article>
+        <article class="feature-card reveal" data-dish="ensalada">
+          <div class="feature-visual"><img src="assets/salad.webp" alt="Ensalada de remolacha asada, cítricos y queso fresco" width="960" height="960" loading="lazy"></div>
+          <div class="feature-meta"><span>02 · Huerta</span><h3>Remolachas a la llama</h3><button type="button" aria-label="Ver Remolachas a la llama">Explorar <span>↗</span></button></div>
+        </article>
+        <article class="feature-card reveal" data-dish="burger">
+          <div class="feature-visual"><img src="assets/burger.webp" alt="Hamburguesa artesanal con cebolla encurtida y papas rústicas" width="960" height="960" loading="lazy"></div>
+          <div class="feature-meta"><span>03 · Especial</span><h3>La Nativa</h3><button type="button" aria-label="Ver hamburguesa La Nativa">Explorar <span>↗</span></button></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="menu-section section" id="menu">
+      <div class="shell">
+        <div class="menu-heading reveal">
+          <div>
+            <p class="eyebrow"><span></span>Nuestra carta</p>
+            <h2>Un recorrido por<br><em>Latinoamérica</em></h2>
+          </div>
+          <p>Pequeños platos, fuego al centro y recetas que respetan el producto.</p>
+        </div>
+        <div class="menu-tabs" role="tablist" aria-label="Categorías del menú" data-menu-tabs>
+          <button role="tab" aria-selected="true" data-category="entradas">Entradas</button>
+          <button role="tab" aria-selected="false" data-category="brasas">Brasas</button>
+          <button role="tab" aria-selected="false" data-category="especiales">Especiales</button>
+          <button role="tab" aria-selected="false" data-category="bebidas">Bebidas</button>
+          <button role="tab" aria-selected="false" data-category="postres">Postres</button>
+        </div>
+        <div class="menu-list" data-menu-list aria-live="polite"></div>
+        <p class="menu-note">Menú, precios y disponibilidad presentados únicamente con fines demostrativos.</p>
+      </div>
+    </section>
+
+    <section class="story section" id="historia">
+      <div class="story-image reveal"><img src="assets/plating.webp" alt="Cocinero terminando cuidadosamente un plato frente al fuego" width="960" height="960" loading="lazy"></div>
+      <div class="story-copy reveal">
+        <p class="eyebrow eyebrow-dark"><span></span>Nuestra esencia</p>
+        <h2>El fuego no es una técnica.<br><em>Es un lenguaje.</em></h2>
+        <p>En Brasa Nativa imaginamos una cocina viva: ingredientes cercanos, productores con nombre propio y el aroma de la leña marcando el ritmo.</p>
+        <dl class="story-values">
+          <div><dt>01</dt><dd><strong>Origen</strong><span>Producto local, temporada y memoria.</span></dd></div>
+          <div><dt>02</dt><dd><strong>Fuego</strong><span>Brasas pacientes, sabor profundo.</span></dd></div>
+          <div><dt>03</dt><dd><strong>Mesa</strong><span>Platos que invitan a compartir.</span></dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="gallery-section section" aria-labelledby="gallery-title">
+      <div class="shell gallery-heading reveal">
+        <p class="eyebrow eyebrow-dark"><span></span>Atmósfera</p>
+        <h2 id="gallery-title">Una experiencia para<br><em>todos los sentidos</em></h2>
+      </div>
+      <div class="gallery-grid shell">
+        <figure class="gallery-tall reveal"><img src="assets/interior.webp" alt="Interior cálido de Brasa Nativa con tonos terracota y verde oliva" width="960" height="960" loading="lazy"></figure>
+        <figure class="reveal"><img src="assets/cocktail.webp" alt="Cóctel de mezcal y piña asada" width="960" height="960" loading="lazy"></figure>
+        <figure class="reveal"><img src="assets/dessert.webp" alt="Postre de chocolate oscuro, dulce de leche y naranja" width="960" height="960" loading="lazy"></figure>
+        <figure class="gallery-wide reveal"><img src="assets/embers.webp" alt="Brasas encendidas con romero, chiles secos y sal marina" width="960" height="960" loading="lazy"></figure>
+      </div>
+    </section>
+
+    <section class="reviews section" aria-labelledby="reviews-title">
+      <div class="shell">
+        <div class="review-head reveal">
+          <div><p class="eyebrow"><span></span>Voces de muestra</p><h2 id="reviews-title">Lo que dirían<br><em>nuestros comensales</em></h2></div>
+          <div class="review-controls">
+            <button type="button" data-review-prev aria-label="Reseña anterior">←</button>
+            <button type="button" data-review-next aria-label="Siguiente reseña">→</button>
+          </div>
+        </div>
+        <div class="review-stage reveal" data-review-stage aria-live="polite"></div>
+        <p class="sample-label">Contenido ficticio creado para visualizar la experiencia. No corresponde a testimonios reales.</p>
+      </div>
+    </section>
+
+    <section class="visit section" id="visitanos">
+      <div class="shell visit-grid">
+        <div class="visit-copy reveal">
+          <p class="eyebrow eyebrow-dark"><span></span>Ven a la mesa</p>
+          <h2>Donde el fuego<br><em>nos encuentra</em></h2>
+          <p class="visit-address">Calle Origen 108, Distrito Creativo<br><small>Dirección ficticia para esta demostración.</small></p>
+          <button class="button button-dark" type="button" data-reservation>Reservar mesa <span>↗</span></button>
+        </div>
+        <div class="hours reveal">
+          <p>Horarios demostrativos</p>
+          <div><span>Martes — Jueves</span><strong>12:00 — 22:30</strong></div>
+          <div><span>Viernes — Sábado</span><strong>12:00 — 00:00</strong></div>
+          <div><span>Domingo</span><strong>12:00 — 18:00</strong></div>
+          <div class="closed"><span>Lunes</span><strong>Cerrado</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta">
+      <img src="assets/hero-fire.webp" alt="" aria-hidden="true" loading="lazy">
+      <div class="final-shade"></div>
+      <div class="shell final-content reveal">
+        <p class="eyebrow"><span></span>Tu mesa te espera</p>
+        <h2>¿Listo para vivir<br><em>la experiencia?</em></h2>
+        <div class="final-actions">
+          <button class="button button-primary" type="button" data-reservation>Reservar ahora</button>
+          <button class="button button-line" type="button" data-order>Hacer un pedido</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-grid">
+      <a class="brand brand-footer" href="#inicio"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span><strong>Brasa Nativa</strong><small>Fuego · origen · sabor</small></span></a>
+      <div class="footer-links"><a href="#menu">Menú</a><a href="#historia">Esencia</a><a href="#visitanos">Visítanos</a></div>
+      <div class="studio-credit"><span>Demo creada por</span><a href="https://brancho0921-web.github.io/ab-web-studio/" target="_blank" rel="noopener">AB Web Studio <span aria-hidden="true">↗</span></a></div>
+    </div>
+    <div class="shell footer-bottom"><span>© <span data-year></span> Brasa Nativa · Proyecto ficticio</span><a href="https://brancho0921-web.github.io/ab-web-studio/" target="_blank" rel="noopener">¿Quieres una página como esta?</a></div>
+  </footer>
+
+  <dialog class="modal" data-modal aria-labelledby="modal-title">
+    <button class="modal-close" type="button" data-modal-close aria-label="Cerrar ventana">×</button>
+    <div class="modal-icon" aria-hidden="true">✦</div>
+    <p class="eyebrow eyebrow-dark"><span></span>Experiencia demo</p>
+    <h2 id="modal-title" data-modal-title>Reserva tu mesa</h2>
+    <p data-modal-copy>En una web real, este botón abriría el WhatsApp oficial del restaurante con un mensaje listo para reservar. Aquí no contactará a ningún tercero.</p>
+    <a class="button button-dark" href="https://brancho0921-web.github.io/ab-web-studio/" target="_blank" rel="noopener">Quiero una web así <span>↗</span></a>
+  </dialog>
+</body>
+</html>
