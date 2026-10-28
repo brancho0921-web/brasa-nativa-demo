@@ -150,11 +150,14 @@ function start() {
   ScrollTrigger.create({ trigger: '.panel:not([hidden]) .plates', start: 'top 85%', once: true, onEnter: () => platesIn($('.panel:not([hidden]) .plates')) });
   document.addEventListener('carta:tab', (e) => platesIn(e.detail));
 
-  // La ficha se abre con el plato redondo que se vuelve cuadrado
+  // La ficha se abre con el plato redondo que se vuelve cuadrado.
+  // GSAP mide la ficha la primera vez que la anima; si lo hace abierta (position fixed, sin offsetParent)
+  // la saca y la reinserta en el DOM y el <dialog> pierde la capa superior. Se mide aquí, cerrada.
+  gsap.set('#sheet', { y: 0, scale: 1 });
   document.addEventListener('ficha:open', (e) => {
     gsap.fromTo('#sheet', { y: 40, opacity: 0, scale: 0.96 }, { y: 0, opacity: 1, scale: 1, duration: 0.6, ease });
     gsap.fromTo(e.detail.to, { clipPath: 'circle(32% at 50% 50%)', scale: 1.08, rotate: -6 }, { clipPath: 'circle(75% at 50% 50%)', scale: 1, rotate: 0, duration: 0.9, ease, delay: 0.05 });
-    gsap.from($$('.sheet-body > *'), { y: 18, opacity: 0, duration: 0.7, ease, stagger: 0.06, delay: 0.15 });
+    gsap.fromTo($$('.sheet-body > *'), { y: 18, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7, ease, stagger: 0.06, delay: 0.15, overwrite: true });
   });
 
   // ---------- Pedido ----------
