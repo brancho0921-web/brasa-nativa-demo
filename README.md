@@ -1,37 +1,22 @@
-# Brasa Nativa — demo gastronómica
+# Ceniza — demo de parrilla criolla
 
-Sitio estático de portafolio creado para AB Web Studio. La marca, dirección, horarios, menú, precios y reseñas son ficticios y existen únicamente con fines demostrativos.
+Sitio estático de portafolio de AB Web Studio. Ceniza es un restaurante ficticio: carta, precios, horarios y dirección son de ejemplo.
+
+## Qué tiene
+
+- Portada con brasas en WebGL (Three.js) que suben y se apartan del cursor, y calor sobre el título.
+- "Del fogón a la mesa": escena fijada con tres fotos que aparecen quemándose.
+- La carta: libro en 3D (CSS) que se abre con el scroll y lleva al índice.
+- Platos reales recortados en círculo que flotan y se deslizan; cada uno abre su ficha y se suma al pedido.
+- Pedido para llevar o delivery y reserva de mesa, ambos terminan en un mensaje de WhatsApp.
+- Indicador "Abierto ahora" con la hora de Venezuela.
+
+Sin WebGL, sin JavaScript o con movimiento reducido, todo el contenido queda visible y la carta abierta.
 
 ## Vista local
 
-Desde esta carpeta puedes abrir `index.html` directamente. Para una prueba más fiel, inicia un servidor local:
+Sirve la carpeta con cualquier servidor estático y abre `index.html`.
 
-```powershell
-python -m http.server 4173
-```
+## Créditos
 
-Luego visita `http://localhost:4173/`.
-
-## Estructura
-
-- `index.html`: contenido y estructura semántica.
-- `styles.css`: diseño responsive, estados y animaciones.
-- `script.js`: menú filtrable, carrusel, navegación y modales.
-- `assets/`: fotografías optimizadas, poster, favicon y loop WebM locales.
-
-## Publicación futura en GitHub Pages
-
-El sitio usa rutas relativas y no necesita compilación. Cuando sea aprobado, puede subirse a la raíz de un repositorio y activarse GitHub Pages desde la rama principal. No se ha creado repositorio ni publicado esta versión.
-
-## Accesibilidad y rendimiento
-
-- Navegación por teclado, enlace para saltar contenido y estados de foco visibles.
-- Elementos interactivos con etiquetas accesibles y textos alternativos.
-- Respeto de `prefers-reduced-motion`; el video se oculta en ese modo.
-- Portada con recursos separados para orientación vertical y horizontal, poster local de respaldo y pausa automática cuando el dispositivo solicita ahorro de datos.
-- Recursos visuales locales y comprimidos; imágenes secundarias con carga diferida.
-- Sin backend, rastreadores, fuentes externas ni dependencias en tiempo de ejecución.
-
-## Créditos de recursos
-
-Las fotografías fueron generadas específicamente para esta demostración mediante la herramienta de generación de imágenes de OpenAI. Los loops audiovisuales se compusieron localmente a partir de la imagen original de portada. No se utilizaron recursos de Barber House ni hotlinks de terceros.
+Fotos de comida y parrilla de Pexels (licencia Pexels), enlazadas una por una en el pie de la página. Brasas, carta y logo hechos en código.
